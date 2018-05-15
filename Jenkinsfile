@@ -9,13 +9,16 @@ pipeline {
       steps {
         echo 'hello world'
         sh 'echo $NODE_VER'
-        sh "echo $(env.NEW_VAR)"
         }
      }
     stage('Who am I?') { agent any
       steps {
-        echo "${env.NEW_VAR}"
         sh 'whoami'
+        }
+     }
+    stage('Deploy to stage?') { agent none
+      step {
+        input 'Deploy to stage?' 
         }
      }
   }
