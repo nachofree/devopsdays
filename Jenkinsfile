@@ -6,5 +6,10 @@ pipeline {
         echo 'hello world'
         }
      }
+    stage('Who am I?') { agent any
+      steps {
+        sh 'whoami'
+        }
+     }
   }
 }
