@@ -9,7 +9,7 @@ pipeline {
       steps {
         echo 'hello world'
         sh 'echo $NODE_VER'
-        sh 'echo $(env.NEW_VAR)'
+        sh "echo $(env.NEW_VAR)"
         }
      }
     stage('Who am I?') { agent any
