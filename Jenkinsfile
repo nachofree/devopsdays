@@ -5,7 +5,9 @@ pipeline {
     NEW_VAR = 'foo'
   }
   post {
-    sh 'echo "we are done"'
+    steps {
+      sh 'echo "we are done"'
+    }
   }
   stages {
     stage('Beginning') { agent any
