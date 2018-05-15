@@ -2,12 +2,10 @@ pipeline {
   agent none
   environment {
     NODE_VER = '8.1.0'
+    NEW_VAR = 'foo'
   }
   stages {
     stage('Beginning') { agent any
-      environment {
-        NEW_VAR = 'foo'
-      }
       steps {
         echo 'hello world'
         sh 'echo $NODE_VER'
