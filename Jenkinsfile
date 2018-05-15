@@ -21,5 +21,17 @@ pipeline {
         input 'Deploy to stage?' 
         }
      }
+    stage('Parallel'){
+      failFast true
+      stage('foomanchoo'){ agent none
+        steps {
+          echo "Yawn"
+          }
+       }
+      stage('foomanchoo2'){ agent none
+        steps {
+          echo "I'm sleepy"
+          }
+       }
   }
 }
