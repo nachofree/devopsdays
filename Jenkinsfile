@@ -4,11 +4,6 @@ pipeline {
     NODE_VER = '8.1.0'
     NEW_VAR = 'foo'
   }
-  post {
-    steps {
-      sh 'echo "we are done"'
-    }
-  }
   stages {
     stage('Beginning') { agent any
       steps {
