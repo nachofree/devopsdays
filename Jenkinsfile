@@ -23,6 +23,7 @@ pipeline {
      }
     stage('Parallel'){
       failFast true
+      steps{
       stage('foomanchoo'){ agent none
         steps {
           echo "Yawn"
@@ -33,5 +34,6 @@ pipeline {
           echo "I'm sleepy"
           }
        }
+   }
   }
 }
